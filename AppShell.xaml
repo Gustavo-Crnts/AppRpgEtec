@@ -4,13 +4,19 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:AppRpgEtec"
-    xmlns:viewPersonagens="clr-namespace:AppRpgEtec.Views.Personagens"
+    xmlns:viewArmas="clr-namespace:AppRpgEtec.Views.Armas"
+     xmlns:viewPersonagem="clr-namespace:AppRpgEtec.Views.Personagens"
     Shell.FlyoutBehavior="Flyout"
     Title="AppRpgEtec">
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate viewPersonagens:ListagemView}"
+        ContentTemplate="{DataTemplate viewArmas:ListagemView}"
         Route="MainPage" />
+
+    <ShellContent
+    Title="Personagem"
+    ContentTemplate="{DataTemplate viewPersonagem:ListagemView}"
+    Route="App" />
 
 </Shell>

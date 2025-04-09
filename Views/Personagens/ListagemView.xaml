@@ -14,11 +14,20 @@
                       SelectedItem="{Binding PersonagemSelecionado}" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <ViewCell.ContextAction>
+                        <ViewCell>
+                        <ViewCell.ContextActions>
 							<MenuItem Text="Remover" IsDestructive="True"
 							    Command="{Binding Path=BindingContext.RemoverPersonagemCommand, Source={x:Reference ListView}}"
 							    CommandParameter="{Binding .}"></MenuItem>
-                        </ViewCell.ContextAction>
+                        </ViewCell.ContextActions>
+                            <StackLayout Padding="10">
+                                <Label Text="{Binding Nome}" FontSize="18" FontAttributes="Bold"></Label>
+                                <Label Text="{Binding PontosVida}" FontSize="14"></Label>
+                                <Label Text="{Binding Forca}" FontSize="14"></Label>
+                                <Label Text="{Binding Defesa}" FontSize="14"></Label>
+
+                            </StackLayout>
+                        </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

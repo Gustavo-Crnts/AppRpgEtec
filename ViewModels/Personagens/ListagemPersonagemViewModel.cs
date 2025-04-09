@@ -31,7 +31,7 @@ namespace AppRpgEtec.ViewModels.Personagens
         public ICommand NovoPersonagemCommand { get; }
 
         public ICommand RemoverPersonagemCommand { get; set; }
-
+      
         public async Task ObterPersonagens()
         {
             try
@@ -60,6 +60,22 @@ namespace AppRpgEtec.ViewModels.Personagens
 
             }
         }
+
+        private Personagem personagemSelecionado;
+        public Personagem PersonagemSelecionado
+        {
+            get {   return personagemSelecionado; }
+            set
+            {
+                if (value != null)
+                { personagemSelecionado = value; 
+                  
+                    Shell.Current.GoToAsync($"cadPersonagemView?pId={personagemSelecionado.Id}");
+                }
+            }
+        }
+
+
 
         public async Task RemoverPersonagem(Personagem p)
         {
