@@ -5,7 +5,7 @@
 				 android:supportsRtl="true">
 
 		<meta-data android:name="com.google.android.geo.API_KEY"
-				   android:value="AIzaSyCImeppoXrF_6I7abHMkhjymnk0H45CPg4">
+				   android:value="">
 		</meta-data>
 		
 	</application>
